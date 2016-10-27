@@ -1,0 +1,274 @@
+/*прошу прощения, если будет криво работать в ИЕ*/
+
+/*нет возможности проверить*/
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  /*чтобы не сильно заморачиваться с ивентами*/
+  outline: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  font-family: 'Open Sans';
+  color: #4a4f59;
+}
+
+.zeo-wrapper {
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  background: #fff;
+}
+
+.zeo-wrapper:before {
+  content: '';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.zeo-button {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.zeo-button__button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 20px;
+  font-size: 120%;
+  border-radius: 4px;
+  color: #fff;
+  background: #ff3b30;
+}
+
+.zeo-button__button:first-letter {
+  text-transform: capitalize;
+}
+
+.zeo-button__button:hover {
+  cursor: pointer;
+}
+
+.zeo-modal {
+  position: absolute;
+  background: #fff;
+  width: 500px;
+  padding: 25px 50px;
+  display: inline-block;
+  vertical-align: middle;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.zeo-modal-popup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.zeo-modal__window {
+  width: 100%;
+  height: 100%;
+}
+
+.zeo-modal__window__close {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 25px;
+  height: 25px;
+  z-index: 1;
+}
+
+.zeo-modal__window__close__button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+  background: url("../images/icon-popup-close.svg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.zeo-modal__window__close__button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.zeo-modal__window__container__text {
+  font-size: 120%;
+  padding-top: 120px;
+  position: relative;
+  color: #707070;
+}
+
+.zeo-modal__window__container__text:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+  background: url("../images/icon-warning_notify-red.svg") 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.zeo-modal__window__container__text:first-letter {
+  text-transform: capitalize;
+}
+
+.zeo-modal__window__container__buttons {
+  padding: 20px 0;
+  font-size: 0;
+}
+
+.zeo-modal__window__container__button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  border-radius: 4px;
+  background: #fff;
+  border: 2px solid #d7deea;
+  color: rgba(139,147,163,0.7);
+  font-size: 100%;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.zeo-modal__window__container__button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: all 0.2s ease-in-out;
+}
+
+.zeo-modal__window__container__button:first-letter {
+  text-transform: capitalize;
+}
+
+.zeo-modal__window__container__button__holder {
+  width: 50%;
+  display: inline-block;
+  height: 40px;
+  font-size: 20px;
+}
+
+.zeo-modal__window__container__button__holder:first-child {
+  padding-right: 10px;
+}
+
+.zeo-modal__window__container__button__holder:last-child {
+  padding-left: 10px;
+}
+
+.overlay {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(52,56,67,0.9);
+}
+
+.uninstall {
+  background: #ff3b30;
+  color: #fff;
+  border: none;
+  box-shadow: 0px 2px 0 0px #d93229;
+}
+
+.showMe {
+  -webkit-animation: showMe 0.5s ease-in-out;
+  animation: showMe 0.5s ease-in-out;
+  z-index: 10;
+  transition: all 0.2s ease-in-out;
+}
+
+.hideMe {
+  -webkit-animation: hideMe 0.5s ease-in-out;
+  animation: hideMe 0.5s ease-in-out;
+  z-index: -1;
+  transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 550px) {
+  .zeo-modal {
+    width: 300px;
+    padding: 20px;
+  }
+}
+
+@-webkit-keyframes showMe {
+  from {
+    z-index: -1;
+    opacity: 0;
+  }
+
+  to {
+    z-index: 10;
+    opacity: 1;
+  }
+}
+
+@keyframes showMe {
+  from {
+    z-index: -1;
+    opacity: 0;
+  }
+
+  to {
+    z-index: 10;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hideMe {
+  from {
+    opacity: 1;
+    z-index: 10;
+  }
+
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes hideMe {
+  from {
+    opacity: 1;
+    z-index: 10;
+  }
+
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}

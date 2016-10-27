@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>zeo pop-up</title>
+	<link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+	<div class="zeo-wrapper">
+		<div class="zeo-button">
+			<button id="popupOpener" class="zeo-button__button">call popup here</button>
+		</div>
+		<div id="modal" class="zeo-modal-popup">
+			<div class="zeo-modal">
+				<div class="zeo-modal__window">
+					<div class="zeo-modal__window__close">
+						<button id="popupCloser" class="zeo-modal__window__close__button"></button>
+					</div>
+					<div class="zeo-modal__window__container">
+						<div class="zeo-modal__window__container__text">
+							are you sure you want to uninstall the Shazam app
+						</div>
+						<div class="zeo-modal__window__container__buttons">
+						<div class="zeo-modal__window__container__button__holder">
+							<button id="cancel" class="zeo-modal__window__container__button cancel">
+								cancel
+							</button>
+						</div>
+						<div class="zeo-modal__window__container__button__holder">
+							<button id="uninstall" class="zeo-modal__window__container__button uninstall">
+								uninstall
+							</button>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="overlay" class="overlay"></div>
+		</div>
+	</div>
+	<script src="./script/script.js"></script>
+</body>
+</html>
