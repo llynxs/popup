@@ -22,7 +22,7 @@ body {
   color: #4a4f59;
 }
 
-.zeo-wrapper {
+.popup-wrapper {
   font-size: 20px;
   width: 100%;
   height: 100%;
@@ -31,19 +31,19 @@ body {
   background: #fff;
 }
 
-.zeo-wrapper:before {
+.popup-wrapper:before {
   content: '';
   height: 100%;
   display: inline-block;
   vertical-align: middle;
 }
 
-.zeo-button {
+.popup-button {
   display: inline-block;
   vertical-align: middle;
 }
 
-.zeo-button__button {
+.popup-button__button {
   width: 100%;
   height: 100%;
   border: none;
@@ -54,15 +54,15 @@ body {
   background: #ff3b30;
 }
 
-.zeo-button__button:first-letter {
+.popup-button__button:first-letter {
   text-transform: capitalize;
 }
 
-.zeo-button__button:hover {
+.popup-button__button:hover {
   cursor: pointer;
 }
 
-.zeo-modal {
+.popup-modal {
   position: absolute;
   background: #fff;
   width: 500px;
@@ -78,7 +78,7 @@ body {
   border-radius: 4px;
 }
 
-.zeo-modal-popup {
+.popup-modal-popup {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -89,12 +89,12 @@ body {
   z-index: -1;
 }
 
-.zeo-modal__window {
+.popup-modal__window {
   width: 100%;
   height: 100%;
 }
 
-.zeo-modal__window__close {
+.popup-modal__window__close {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -103,7 +103,7 @@ body {
   z-index: 1;
 }
 
-.zeo-modal__window__close__button {
+.popup-modal__window__close__button {
   width: 100%;
   height: 100%;
   border: none;
@@ -113,19 +113,19 @@ body {
   background-size: cover;
 }
 
-.zeo-modal__window__close__button:hover {
+.popup-modal__window__close__button:hover {
   cursor: pointer;
   opacity: 0.9;
 }
 
-.zeo-modal__window__container__text {
+.popup-modal__window__container__text {
   font-size: 120%;
   padding-top: 120px;
   position: relative;
   color: #707070;
 }
 
-.zeo-modal__window__container__text:before {
+.popup-modal__window__container__text:before {
   content: '';
   position: absolute;
   top: 0;
@@ -137,16 +137,16 @@ body {
   background-size: contain;
 }
 
-.zeo-modal__window__container__text:first-letter {
+.popup-modal__window__container__text:first-letter {
   text-transform: capitalize;
 }
 
-.zeo-modal__window__container__buttons {
+.popup-modal__window__container__buttons {
   padding: 20px 0;
   font-size: 0;
 }
 
-.zeo-modal__window__container__button {
+.popup-modal__window__container__button {
   width: 100%;
   height: 100%;
   border: none;
@@ -160,28 +160,28 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.zeo-modal__window__container__button:hover {
+.popup-modal__window__container__button:hover {
   cursor: pointer;
   opacity: 0.9;
   transition: all 0.2s ease-in-out;
 }
 
-.zeo-modal__window__container__button:first-letter {
+.popup-modal__window__container__button:first-letter {
   text-transform: capitalize;
 }
 
-.zeo-modal__window__container__button__holder {
+.popup-modal__window__container__button__holder {
   width: 50%;
   display: inline-block;
   height: 40px;
   font-size: 20px;
 }
 
-.zeo-modal__window__container__button__holder:first-child {
+.popup-modal__window__container__button__holder:first-child {
   padding-right: 10px;
 }
 
-.zeo-modal__window__container__button__holder:last-child {
+.popup-modal__window__container__button__holder:last-child {
   padding-left: 10px;
 }
 
@@ -219,7 +219,7 @@ body {
 }
 
 @media (max-width: 550px) {
-  .zeo-modal {
+  .popup-modal {
     width: 300px;
     padding: 20px;
   }
